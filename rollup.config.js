@@ -7,6 +7,8 @@ module.exports = [
 		input: 'lib/dist.js',
 		output: {
 			file: 'dist/index.js',
+			format: 'iife',
+			name: 'UIDateElement',
 		},
 		plugins: [
 			commonjs(),
@@ -17,6 +19,8 @@ module.exports = [
 		input: 'lib/dist.js',
 		output: {
 			file: 'dist/index.min.js',
+			format: 'iife',
+			name: 'UIDateElement',
 		},
 		plugins: [
 			commonjs(),
