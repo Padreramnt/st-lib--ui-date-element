@@ -1,0 +1,48 @@
+{
+	"author": "padreramnt",
+	"description": "Custom element for declarative formatting of dates.",
+	"dependencies": {
+		"@st-lib/is": "^1.0.3",
+		"@st-lib/private": "^1.0.0"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^13.0.0",
+		"@rollup/plugin-node-resolve": "^8.0.1",
+		"rimraf": "^3.0.1",
+		"rollup": "^2.18.0",
+		"rollup-plugin-terser": "^6.1.0",
+		"typescript": "^3.5.1"
+	},
+	"files": [
+		"lib/index.js",
+		"lib/index.d.ts",
+		"dist"
+	],
+	"keywords": [
+		"st-lib",
+		"ui-date",
+		"html",
+		"element"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Padreramnt/st-lib--ui-date-element"
+	},
+	"license": "MIT",
+	"main": "lib/index.js",
+	"module": "lib/index.js",
+	"name": "@st-lib/ui-date-element",
+	"scripts": {
+		"build": "tsc -p ./tsconfig.json&&rollup -c",
+		"rollup": "rollup",
+		"prebuild": "rimraf -rf ./lib&&rimraf -rf ./dist",
+		"prepublishOnly": "npm run build",
+		"preversion": "tsc -p ./tsconfig.json --noEmit",
+		"prestart": "rimraf -rf ./lib&&rimraf -rf ./dist",
+		"start": "tsc -p ./tsconfig.json -w",
+		"start:tsc": "tsc",
+		"test": "tsc -p ./tsconfig.json --noEmit"
+	},
+	"types": "lib/index.d.ts",
+	"version": "1.0.0"
+}
